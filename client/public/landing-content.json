@@ -1,0 +1,120 @@
+{
+  "brand": {
+    "name": "Oriax Agents",
+    "slogan": "AI teammate orchestration for modern teams"
+  },
+  "hero": {
+    "badge": "Prelaunch Access Open",
+    "headline": "Launch workflows with AI agents that plan, execute, and report in one flow.",
+    "subheadline": "Oriax Agents helps teams automate repetitive multi-step work with reliable human-in-the-loop control.",
+    "primaryCta": "Join the waitlist",
+    "secondaryCta": "See capabilities",
+    "trustLine": "Built for product, operations, support, and growth teams."
+  },
+  "highlights": [
+    {
+      "title": "Fast setup",
+      "description": "Deploy your first agent playbook in under one day."
+    },
+    {
+      "title": "Controlled autonomy",
+      "description": "Each agent run stays observable with approvals where needed."
+    },
+    {
+      "title": "Reliable handoff",
+      "description": "Agents hand outcomes and context back to your team in clear reports."
+    }
+  ],
+  "problemSolution": {
+    "problemTitle": "Teams lose momentum in repetitive coordination",
+    "problemText": "Important work is delayed by copy-paste tasks, scattered context, and manual status updates across tools.",
+    "solutionTitle": "Oriax Agents orchestrates multi-step work",
+    "solutionText": "Define outcomes once, let agents execute the steps, and keep people in control at decision checkpoints."
+  },
+  "features": [
+    {
+      "label": "Playbook builder",
+      "description": "Create reusable task flows with prompts, guardrails, and approval gates."
+    },
+    {
+      "label": "Multi-agent routing",
+      "description": "Route each sub-task to the best specialist agent automatically."
+    },
+    {
+      "label": "Unified memory",
+      "description": "Keep context synchronized so every run starts with relevant knowledge."
+    },
+    {
+      "label": "Progress stream",
+      "description": "Track execution events in real time with concise summaries."
+    }
+  ],
+  "workflow": [
+    {
+      "step": "01",
+      "title": "Define target outcome",
+      "description": "Set objective, constraints, and quality bar for each run."
+    },
+    {
+      "step": "02",
+      "title": "Launch orchestrated agents",
+      "description": "Agents split work, execute in parallel, and resolve dependencies."
+    },
+    {
+      "step": "03",
+      "title": "Review and ship",
+      "description": "Approve outputs with full traceability and ship faster."
+    }
+  ],
+  "useCases": [
+    {
+      "title": "Product launch ops",
+      "summary": "Coordinate briefs, channel assets, and checklists with less manual chase.",
+      "metric": "Save up to 12 hours per launch cycle"
+    },
+    {
+      "title": "Support automation",
+      "summary": "Triages tickets, drafts responses, and escalates edge cases with context.",
+      "metric": "Reduce first response time by 45 percent"
+    },
+    {
+      "title": "Growth experiments",
+      "summary": "Run experiment loops from idea intake to report generation.",
+      "metric": "Double experiment throughput"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is Oriax Agents replacing human teams?",
+      "answer": "No. It is built to remove repetitive execution so teams can focus on higher-value decisions."
+    },
+    {
+      "question": "Can we approve steps before final output?",
+      "answer": "Yes. You can configure approval checkpoints at critical stages."
+    },
+    {
+      "question": "When will early access be available?",
+      "answer": "Waitlist members receive phased access updates and onboarding invites first."
+    }
+  ],
+  "waitlist": {
+    "title": "Get early access",
+    "description": "Join the prelaunch list to receive invite waves, roadmap drops, and private demos.",
+    "privacyNote": "No spam. Product updates only.",
+    "successMessage": "Thanks. Your waitlist request has been received."
+  },
+  "footer": {
+    "copyright": "2026 Oriax Agents. All rights reserved.",
+    "email": "hello@nanagents.ai",
+    "socials": [
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com"
+      },
+      {
+        "label": "X",
+        "href": "https://x.com"
+      }
+    ]
+  }
+}
