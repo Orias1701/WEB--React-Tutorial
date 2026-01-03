@@ -1,0 +1,27 @@
+:root {
+  --font-display: "Fraunces", "Times New Roman", serif;
+  --font-body: "Outfit", "Segoe UI", sans-serif;
+
+  --color-bg-top: #f7fdff;
+  --color-bg-mid: #eef8ff;
+  --color-bg-bottom: #fff7f1;
+  --color-surface: rgba(255, 255, 255, 0.68);
+  --color-surface-strong: rgba(255, 255, 255, 0.82);
+  --color-border: rgba(22, 77, 108, 0.16);
+  --color-text-strong: #0f2432;
+  --color-text-muted: #446273;
+  --color-accent-teal: #129a97;
+  --color-accent-coral: #ff8a5b;
+  --color-accent-sky: #4da7ea;
+  --color-danger: #b84949;
+  --color-success: #1f8c5a;
+
+  --shadow-soft: 0 18px 40px rgba(29, 73, 97, 0.14);
+  --shadow-card: 0 10px 24px rgba(42, 98, 129, 0.12);
+
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+
+  --ease-smooth: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
