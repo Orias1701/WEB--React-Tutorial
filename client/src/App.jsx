@@ -136,44 +136,48 @@ function App() {
 
   return (
     <div className={styles.page}>
-      <div className={styles.noiseLayer} aria-hidden="true" />
+      <div className={styles.backgroundGlow} aria-hidden="true" />
 
-      <header className={`${styles.topBar} ${styles.glass}`}>
-        <div>
-          <p className={styles.brandTitle}>{brand.name}</p>
-          <p className={styles.brandSlogan}>{brand.slogan}</p>
-        </div>
-        <a href="#waitlist" className={styles.ctaLink}>
-          Get Invite
-        </a>
+      <header className={styles.siteHeader}>
+        <nav className={styles.navbar} aria-label="Primary navigation">
+          <a href="#top" className={styles.brandBlock}>
+            <p className={styles.brandName}>{brand.name}</p>
+            <p className={styles.brandSlogan}>{brand.slogan}</p>
+          </a>
+          <a href="#waitlist" className={styles["btn-primary"]}>
+            Get Invite
+          </a>
+        </nav>
       </header>
 
-      <main className={styles.main}>
-        <section className={`${styles.hero} ${styles.reveal}`}>
-          <div>
-            <p className={styles.badge}>{hero.badge}</p>
-            <h1>{hero.headline}</h1>
+      <main className={styles.mainContent} id="top">
+        <section className={`${styles.hero} ${styles.reveal}`} aria-labelledby="hero-title">
+          <article className={styles.heroContent}>
+            <p className={styles.pillBadge}>{hero.badge}</p>
+            <h1 id="hero-title" className={styles["gradient-text"]}>
+              {hero.headline}
+            </h1>
             <p className={styles.heroText}>{hero.subheadline}</p>
 
             <div className={styles.heroActions}>
-              <a href="#waitlist" className={styles.primaryButton}>
+              <a href="#waitlist" className={styles["btn-primary"]}>
                 {hero.primaryCta}
               </a>
-              <a href="#features" className={styles.secondaryButton}>
+              <a href="#features" className={styles["btn-secondary"]}>
                 {hero.secondaryCta}
               </a>
             </div>
 
             <p className={styles.trustLine}>{hero.trustLine}</p>
-          </div>
+          </article>
 
-          <aside className={`${styles.heroPanel} ${styles.glass}`}>
-            <p className={styles.panelTitle}>What you can expect</p>
-            <ul className={styles.panelList}>
-              {highlights.map((item) => (
-                <li key={item.title} className={styles.panelItem}>
-                  <p className={styles.panelItemTitle}>{item.title}</p>
-                  <p className={styles.panelItemCopy}>{item.description}</p>
+          <aside className={`${styles.card} ${styles.heroAside}`}>
+            <p className={styles.cardEyebrow}>What you can expect</p>
+            <ul className={styles.statsList}>
+              {highlights.map((item, index) => (
+                <li key={`${item.title}-${index}`} className={`${styles["stat-card"]} ${styles.interactiveCard}`}>
+                  <p className={styles.statTitle}>{item.title}</p>
+                  <p className={styles.statCopy}>{item.description}</p>
                 </li>
               ))}
             </ul>
@@ -186,12 +190,12 @@ function App() {
             <h2>Replace fragmented execution with orchestrated flow.</h2>
           </header>
 
-          <div className={styles.dualCards}>
-            <article className={`${styles.infoCard} ${styles.glass}`}>
+          <div className={styles.gridTwo}>
+            <article className={`${styles.card} ${styles.interactiveCard}`}>
               <h3>{problemSolution.problemTitle}</h3>
               <p>{problemSolution.problemText}</p>
             </article>
-            <article className={`${styles.infoCard} ${styles.glass}`}>
+            <article className={`${styles.card} ${styles.interactiveCard}`}>
               <h3>{problemSolution.solutionTitle}</h3>
               <p>{problemSolution.solutionText}</p>
             </article>
@@ -204,9 +208,9 @@ function App() {
             <h2>Built for teams shipping in high-context environments.</h2>
           </header>
 
-          <div className={styles.featureGrid}>
-            {features.map((feature) => (
-              <article key={feature.label} className={`${styles.featureCard} ${styles.glass}`}>
+          <div className={styles.gridFeature}>
+            {features.map((feature, index) => (
+              <article key={`${feature.label}-${index}`} className={`${styles.card} ${styles.interactiveCard}`}>
                 <h3>{feature.label}</h3>
                 <p>{feature.description}</p>
               </article>
@@ -220,10 +224,10 @@ function App() {
             <h2>Three moves from idea to approved output.</h2>
           </header>
 
-          <div className={styles.workflowGrid}>
-            {workflow.map((item) => (
-              <article key={item.step} className={`${styles.workflowCard} ${styles.glass}`}>
-                <p className={styles.step}>{item.step}</p>
+          <div className={styles.gridWorkflow}>
+            {workflow.map((item, index) => (
+              <article key={`${item.step}-${index}`} className={`${styles.card} ${styles.interactiveCard}`}>
+                <p className={styles.stepBadge}>{item.step}</p>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
               </article>
@@ -237,12 +241,12 @@ function App() {
             <h2>Early use cases with measurable time gains.</h2>
           </header>
 
-          <div className={styles.useCaseGrid}>
-            {useCases.map((useCase) => (
-              <article key={useCase.title} className={`${styles.useCaseCard} ${styles.glass}`}>
+          <div className={styles.gridUseCases}>
+            {useCases.map((useCase, index) => (
+              <article key={`${useCase.title}-${index}`} className={`${styles.card} ${styles.interactiveCard}`}>
                 <h3>{useCase.title}</h3>
                 <p>{useCase.summary}</p>
-                <p className={styles.metric}>{useCase.metric}</p>
+                <p className={styles.metricPill}>{useCase.metric}</p>
               </article>
             ))}
           </div>
@@ -255,8 +259,8 @@ function App() {
           </header>
 
           <div className={styles.faqList}>
-            {faq.map((item) => (
-              <details key={item.question} className={`${styles.faqItem} ${styles.glass}`}>
+            {faq.map((item, index) => (
+              <details key={`${item.question}-${index}`} className={`${styles.card} ${styles.faqItem} ${styles.interactiveCard}`}>
                 <summary>{item.question}</summary>
                 <p>{item.answer}</p>
               </details>
@@ -265,20 +269,20 @@ function App() {
         </section>
 
         <section id="waitlist" className={`${styles.section} ${styles.reveal}`}>
-          <div className={styles.waitlistLayout}>
-            <article className={`${styles.waitlistIntro} ${styles.glass}`}>
+          <div className={styles.waitlistGrid}>
+            <article className={`${styles.card} ${styles.waitlistIntro}`}>
               <p className={styles.sectionTag}>Early Access</p>
               <h2>{waitlist.title}</h2>
               <p>{waitlist.description}</p>
-              <p className={styles.privacy}>{waitlist.privacyNote}</p>
+              <p className={styles.privacyText}>{waitlist.privacyNote}</p>
             </article>
 
-            <form className={`${styles.waitlistForm} ${styles.glass}`} onSubmit={handleSubmit} noValidate>
-              <label className={styles.fieldLabel} htmlFor="name">
+            <form className={`${styles.card} ${styles.waitlistForm}`} onSubmit={handleSubmit} noValidate>
+              <label className={styles.inputLabel} htmlFor="name">
                 Name
               </label>
               <input
-                className={styles.fieldInput}
+                className={styles.inputField}
                 id="name"
                 name="name"
                 value={formData.name}
@@ -287,11 +291,11 @@ function App() {
                 autoComplete="name"
               />
 
-              <label className={styles.fieldLabel} htmlFor="email">
+              <label className={styles.inputLabel} htmlFor="email">
                 Work email
               </label>
               <input
-                className={styles.fieldInput}
+                className={styles.inputField}
                 id="email"
                 name="email"
                 value={formData.email}
@@ -300,11 +304,11 @@ function App() {
                 autoComplete="email"
               />
 
-              <label className={styles.fieldLabel} htmlFor="company">
+              <label className={styles.inputLabel} htmlFor="company">
                 Company
               </label>
               <input
-                className={styles.fieldInput}
+                className={styles.inputField}
                 id="company"
                 name="company"
                 value={formData.company}
@@ -313,11 +317,11 @@ function App() {
                 autoComplete="organization"
               />
 
-              <label className={styles.fieldLabel} htmlFor="role">
+              <label className={styles.inputLabel} htmlFor="role">
                 Role
               </label>
               <input
-                className={styles.fieldInput}
+                className={styles.inputField}
                 id="role"
                 name="role"
                 value={formData.role}
@@ -329,7 +333,7 @@ function App() {
               {formError ? <p className={styles.formError}>{formError}</p> : null}
               {submitMessage ? <p className={styles.formSuccess}>{submitMessage}</p> : null}
 
-              <button type="submit" className={styles.primaryButton} disabled={isSubmitting}>
+              <button type="submit" className={`${styles["btn-primary"]} ${styles.submitButton}`} disabled={isSubmitting}>
                 {isSubmitting ? "Saving..." : "Join waitlist"}
               </button>
             </form>
@@ -337,10 +341,10 @@ function App() {
         </section>
       </main>
 
-      <footer className={styles.footer}>
+      <footer className={styles.siteFooter}>
         <p>{footer.copyright}</p>
         <a href={`mailto:${footer.email}`}>{footer.email}</a>
-        <nav className={styles.socials} aria-label="Social links">
+        <nav className={styles.footerLinks} aria-label="Social links">
           {(footer.socials || []).map((social) => (
             <a key={social.label} href={social.href} target="_blank" rel="noreferrer">
               {social.label}
